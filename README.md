@@ -157,6 +157,7 @@ computed: {
 Breaking changes:
   1) Use `item` slot instead of default to display elements
   2) Provide a key for items using `itemKey` props
+  3) You should use `element` parameter name in <template> (look **Slots** - **item** paragraphs).
 
 From:
 ``` html
@@ -375,6 +376,8 @@ Slot props:
 - `element` the element in the list
 - `index` the element index
 
+**Pay attention**: the names of these props in `#item="{element, index}"` construction and child code should be exactly `element` and, if you need, `index`: these are not function arguments but scoped slots parameters (https://vuejs.org/guide/components/slots.html#scoped-slots)
+   
 It is the only required slot.
 
 
